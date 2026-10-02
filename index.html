@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Monitoramento Estrutural</title>
+    
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Bibliotecas externas (Chart.js e PapaParse) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        ⚡ PAINEL DE MONITORAMENTO ESTRUTURAL & ANÁLISE DE VIBRAÇÕES
+    </header>
+
+    <!-- Controles -->
+    <section class="controls">
+        <input type="text" id="csvUrl" placeholder="Cole aqui o link do CSV do Google Sheets...">
+        <button onclick="carregarDados()">Carregar Dados</button>
+        <button onclick="carregarDadosDemonstracao()" class="btn-demo">Dados de Exemplo</button>
+    </section>
+
+    <!-- Cartões de Indicadores KPI -->
+    <section class="kpi-container">
+        <div class="kpi-card kpi-status">
+            <div class="kpi-title">ÚLTIMO STATUS</div>
+            <div class="kpi-value" id="kpiStatus">--</div>
+        </div>
+        <div class="kpi-card kpi-max-z">
+            <div class="kpi-title">ACELERAÇÃO MÁX. Z (g)</div>
+            <div class="kpi-value" id="kpiMaxZ">--</div>
+        </div>
+        <div class="kpi-card kpi-leituras">
+            <div class="kpi-title">TOTAL DE LEITURAS</div>
+            <div class="kpi-value" id="kpiLeituras">--</div>
+        </div>
+    </section>
+
+    <!-- Área dos Gráficos -->
+    <main class="charts-grid">
+        <div class="chart-card">
+            <canvas id="chartAceleracao"></canvas>
+        </div>
+        <div class="chart-card">
+            <canvas id="chartFFT"></canvas>
+        </div>
+    </main>
+
+    <!-- Conexão com o arquivo JavaScript Externo -->
+    <script src="script.js"></script>
+</body>
+</html>
