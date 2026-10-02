@@ -1,5 +1,5 @@
 // Link em formato CSV exportado do Google Sheets
-const URL_GOOGLESHEETS = 'https://docs.google.com/spreadsheets/d/12f8PWBPYgNuN-Ou2Yri_ZzrqHkEKVsv9VSQZ6kZK1Ps/export?format=csv';
+const URL_GOOGLESHEETS = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRad8bx8f6dSZByCnN3u8eCk6QoKaS-7ySKGjERPFUFd7TC-IZIgQG__cvkHWOQCRpr2H3_nM9yTpKE/pubhtml?gid=1921425952&single=true/export?format=csv';
 
 window.onload = function() {
     // Carrega automaticamente os dados ao abrir a página
