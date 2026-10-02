@@ -1,0 +1,128 @@
+/* Estilos Globais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0F172A;
+    color: #F8FAFC;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #1E293B;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #F8FAFC;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Barra de Controles */
+.controls {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background-color: #1E293B;
+    color: #FFF;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #3B82F6;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2563EB;
+}
+
+.btn-demo {
+    background-color: #475569;
+}
+
+.btn-demo:hover {
+    background-color: #334155;
+}
+
+/* Indicadores KPI */
+.kpi-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.kpi-card {
+    background-color: #1E293B;
+    flex: 1;
+    padding: 18px;
+    border-radius: 8px;
+    text-align: center;
+    border-top: 5px solid #3B82F6;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.kpi-title {
+    font-size: 0.8rem;
+    color: #94A3B8;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.kpi-value {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/* Grade de Gráficos */
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.chart-card {
+    background-color: #1E293B;
+    padding: 20px;
+    border-radius: 8px;
+    height: 320px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade para Telas Pequenas */
+@media (max-width: 600px) {
+    .controls {
+        flex-direction: column;
+    }
+    .kpi-container {
+        flex-direction: column;
+    }
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}
